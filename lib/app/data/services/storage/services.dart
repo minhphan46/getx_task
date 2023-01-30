@@ -11,12 +11,12 @@ class StorageService extends GetxService {
     return this;
   }
 
-  // read our data from storage, if u storage string type, this will return string type, ...
+  /// read our data from storage, if u storage string type, this will return string type, ...
   T read<T>(String key) {
     return _box.read(key);
   }
 
-  // write data to storage
+  /// write data to storage
   void write(String key, dynamic value) async {
     await _box.write(key, value);
   }

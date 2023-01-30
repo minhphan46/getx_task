@@ -20,7 +20,7 @@ class TaskProvider {
     ]
   }
   */
-  // lay data tu json luu in local
+  /// lay data tu json luu in local
   List<Task> readTasks() {
     var tasks = <Task>[];
     for (var e in jsonDecode(_storage.read(taskKey).toString())) {
@@ -29,7 +29,7 @@ class TaskProvider {
     return tasks;
   }
 
-  // luu data vao storage
+  /// luu data vao storage
   void writeTasks(List<Task> tasks) {
     _storage.write(taskKey, jsonEncode(tasks));
   }

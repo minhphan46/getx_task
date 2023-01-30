@@ -1,5 +1,4 @@
 import 'package:getx_task/app/data/providers/task/provider.dart';
-
 import '../../models/task.dart';
 
 class TaskRepository {

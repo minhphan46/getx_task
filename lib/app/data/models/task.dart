@@ -13,7 +13,7 @@ class Task extends Equatable {
     this.todos,
   });
 
-  // because constructor is const, so we need a method to change this task
+  /// because constructor is const, so we need a method to change this task
   Task copyWith({
     String? title,
     int? icon,
@@ -27,7 +27,7 @@ class Task extends Equatable {
         todos: todos ?? this.todos,
       );
 
-  // get task from json
+  /// get task from json
   factory Task.fromJson(Map<String, dynamic> json) {
     return Task(
       title: json['title'],
@@ -37,7 +37,7 @@ class Task extends Equatable {
     );
   }
 
-  // convert task to json
+  /// convert task to json
   Map<String, dynamic> toJson() {
     return {
       'title': title,
@@ -48,6 +48,5 @@ class Task extends Equatable {
   }
 
   @override
-  // TODO: implement props
   List<Object?> get props => [title, icon, color];
 }
