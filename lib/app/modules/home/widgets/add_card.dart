@@ -104,6 +104,9 @@ class AddCard extends StatelessWidget {
               ),
             ),
           );
+          // clear text form field
+          homeCtr.editController.clear();
+          homeCtr.changeChipIndex(0);
         },
         child: DottedBorder(
           color: Colors.grey[400]!,
